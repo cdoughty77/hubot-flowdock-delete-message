@@ -27,8 +27,10 @@ Run `npm install hubot-flowdock-delete-message`
 
 ## Help:
 
+```
 hubot delete <#> - Number of most recent hubot messages to delete
 hubot abandon ship <#> - Number of most recent hubot messages to delete
+```
 
 ## Example usage:
 
