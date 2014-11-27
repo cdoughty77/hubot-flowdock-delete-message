@@ -1,0 +1,23 @@
+{
+  "name": "hubot-flowdock-delete-message",
+  "version": "1.0.0",
+  "description": "A hubot flowdock script for deleting message content posted by hubot.",
+  "main": "delete-message.coffee",
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/cdoughty77/hubot-flowdock-delete-message.git"
+  },
+  "keywords": [
+    "hubot",
+    "flowdock",
+    "delete-message"
+  ],
+  "author": "Chris Doughty <https://github.com/cdoughty77>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/cdoughty77/hubot-flowdock-delete-message/issues"
+  },
+  "dependencies": {
+    "coffee-script": "~1.6"
+  }
+}
