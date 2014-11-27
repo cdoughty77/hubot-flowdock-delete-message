@@ -38,7 +38,7 @@ module.exports = (robot) ->
       catch error
         msg.send("Sorry, I wasn't able to parse the JSON data returned from the API call.")
 
-    # Set the images to delete counter
+    # Set the counter for messages to delete
     delCounter = ()->
       if (!isFinite(msg.match[1]) or Math.round(msg.match[1]) == 0) then 1 else Math.round(msg.match[1])
 
@@ -63,7 +63,7 @@ module.exports = (robot) ->
           # Delete message(s) up to user input or hubot msgs found (whichever is smaller)
           for num in [0..(Math.min.apply @, [delCounter(), hubot_msg_ids.length])-1] by 1
             msg_content = getValues(mbody, msgId, hubot_msg_ids[num], msgContent)
-            robot.logger.info("User #{userName} deleted content [#{msg_content[0]}] with id #{hubot_msg_ids[num]} in flow #{flow[0]}")
+            robot.logger.info("User #{userName} deleted content [#{msg_content[0]}] in flow #{flow[0]}")
             msg.robot.http("#{default_url}/#{org[0]}/#{flow[0]}/messages/#{hubot_msg_ids[num]}").delete() (err, res, body) ->
     else
       msg.send("Sorry, I can't delete messages in 1-on-1 chats.")
