@@ -20,7 +20,7 @@ module.exports = (robot) ->
 
     # Set the default API url
     default_url = "https://#{process.env.HUBOT_FLOWDOCK_API_TOKEN}@api.flowdock.com/flows"
-    hubotName = process.env.HUBOT_NAME
+    hubotName = robot.name
     hubotId = robot.brain.userForName(hubotName).id.toString()
     flowId = msg.message.user.room
     userName = msg.message.user.name
