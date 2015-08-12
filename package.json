@@ -1,6 +1,6 @@
 {
   "name": "hubot-flowdock-delete-message",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "A hubot flowdock script for deleting message content posted by hubot.",
   "main": "delete-message.coffee",
   "repository": {
